@@ -15,13 +15,13 @@ const bookTable = (sequelize,DataTypes)=>{
             allowNull:false
         },
         bookAuthor:{
-            type: DataTypes.STRING  // Fix typo: SRING → STRING
+            type: DataTypes.STRING  
         },
         bookGenre:{
-            type: DataTypes.STRING  // Fix typo: SRING → STRING
+            type: DataTypes.STRING 
         }
     })
     return books;
 }
 
-module.exports = bookTable  // Fix typo: module.export → module.exports
+module.exports = bookTable 
