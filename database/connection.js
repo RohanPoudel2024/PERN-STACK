@@ -1,4 +1,5 @@
 const {Sequelize,DataTypes} = require('sequelize');
+const bookTable = require("../models/book.model.js")
 let uri = process.env.URI;
 const sequelize = new Sequelize(uri)
 
@@ -12,4 +13,10 @@ const db = {}
 db.Sequelize = Sequelize
 db.sequelize = sequelize
 
+db.books = bookTable(sequelize,DataTypes)
+
+sequelize.sync({alter:false})
+.then(()=>{
+  console.log("Migrated")
+})
 module.exports = db
