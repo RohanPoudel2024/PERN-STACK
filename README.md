@@ -48,7 +48,7 @@ Today I focused on setting up the database connection using Sequelize ORM:
 ## Project Structure
 
 ```
-pern/
+pern-stack/
 ├── Backend/
 │   ├── app.js             # Main Express server file
 │   ├── index.html         # HTML file
@@ -74,7 +74,7 @@ pern/
 1. Clone the repository:
    ```
    git clone https://github.com/RohanPoudel2024/PERN-STACK.git
-   cd pern
+   cd pern-stack
    ```
 
 2. Install backend dependencies:
