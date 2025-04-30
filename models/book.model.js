@@ -15,7 +15,7 @@ const bookTable = (sequelize,DataTypes)=>{
             allowNull:false
         },
         bookAuthor:{
-            type: DataTypes.STRING  
+            type: DataTypes.STRING,  
         },
         bookGenre:{
             type: DataTypes.STRING 

@@ -8,12 +8,14 @@
 
 - [Project Overview](#project-overview)
 - [My Learning Journey](#my-learning-journey)
+  - [Day 11 Progress](#day-11-progress)
   - [Day 10 Progress](#day-10-progress)
   - [Day 9 Progress](#day-9-progress)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Setup and Installation](#setup-and-installation)
 - [Database Connection](#database-connection)
+- [API Endpoints](#api-endpoints)
 - [Future Development](#future-development)
 
 ## Project Overview
@@ -26,6 +28,15 @@ A full-stack web application built with the PERN stack:
 - **Sequelize** as the ORM for database management
 
 ## My Learning Journey
+
+### Day 11 Progress
+
+Today I implemented API endpoints for the books database:
+- Created a GET endpoint to fetch all books using async/await with Sequelize
+- Implemented a POST endpoint to add new books to the database
+- Learned how to handle JSON data in Express with middleware
+- Practiced using async/await for database operations
+- Structured API responses with proper JSON formatting
 
 ### Day 10 Progress
 
@@ -50,7 +61,7 @@ Today I focused on setting up the database connection using Sequelize ORM:
 ```
 pern-stack/
 ├── Backend/
-│   ├── app.js             # Main Express server file
+│   ├── app.js             # Main Express server file with API routes
 │   ├── index.html         # HTML file
 │   ├── package.json       # Backend dependencies
 │   ├── models/
@@ -74,7 +85,7 @@ pern-stack/
 1. Clone the repository:
    ```
    git clone https://github.com/RohanPoudel2024/PERN-STACK.git
-   cd pern-stack
+   cd pern
    ```
 
 2. Install backend dependencies:
@@ -95,9 +106,15 @@ pern-stack/
 
 The application uses Sequelize to connect to a PostgreSQL database hosted on Supabase. The connection is established in `database/connection.js`.
 
+## API Endpoints
+
+- **GET /books** - Fetches all books from the database
+- **POST /books** - Creates a new book entry with the provided data
+
 ## Future Development
 
-- Implement API endpoints
+- Implement remaining CRUD operations (PUT, DELETE)
+- Add data validation
+- Implement error handling
 - Set up the React frontend
-- Create user authentication
-- Implement data models and relationships
+
