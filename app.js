@@ -19,17 +19,32 @@ app.post("/books",async (req,res)=>{
     // const bookName = req.body.bookName
     // const bookPrice = req.body.bookPrice
   const{bookName,bookPrice,author,bookGenre}=req.body
-  await books.create({
-    //column name : value mentioned above
-    bookName,
-    bookPrice,
-    bookAuthor:author,
-    bookGenre
-  })
 
-    res.json({
-        message:"Books updated successfully"
+  //Empty null ra undefined check garxa
+  if (!bookName || !bookPrice || !author || !bookGenre){
+    return res.status(400).json({
+        message:"Please fill all details"
     })
+  }
+
+  try{
+        await books.create({
+        //column name : value a
+        bookName,
+        bookPrice,
+        bookAuthor:author,
+        bookGenre
+      })
+
+        res.status(200).json({
+        message:"Books updated successfully"
+        })
+    }catch(err){
+        console.error(err)
+        res.status(500).json ({
+            message:"server error"
+        })
+    }
 })
 
 app.listen(3000,()=>{
